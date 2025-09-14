@@ -1,3 +1,5 @@
+# dbt_project.yml
+
 
 # Name your project! Project names should contain only lowercase characters
 # and underscores. A good package name should reflect your organization's
@@ -37,9 +39,10 @@ clean-targets:         # directories to be removed by `dbt clean`
 
 models:
   my_new_project:
-    example:
+    mart:
       +materialized: table
-    +location: EU   # İkinci models yerine buraya taşıdık
+      finance:
+        +schema: finance
 
 seeds:
   +location: EU
